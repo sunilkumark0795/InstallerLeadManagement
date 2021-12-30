@@ -1,0 +1,32 @@
+<apex:page sidebar="true" showHeader="true">    
+    <apex:pageBlock title="Display Data" tabStyle="Customer__c" >
+        <apex:pageBlockSection title="User Data" collapsible="true">
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputText >User Name   :</apex:outputText>
+                <apex:outputText value="{! $User.UserName }" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputText >First Name  :</apex:outputText>
+                <apex:outputText value="{! $User.FirstName }" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputText >Last Name   :</apex:outputText>
+                <apex:outputText value="{! $User.LastName }" />
+            </apex:pageBlockSectionItem> 
+            
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Profile Data">
+            
+           <apex:pageBlockSectionItem >
+               <apex:outputText >User Name :</apex:outputText>
+               <apex:outputText value="{! $Profile.Name }" />
+            </apex:pageBlockSectionItem>   
+            
+        </apex:pageBlockSection>  
+        
+    </apex:pageBlock>
+</apex:page>

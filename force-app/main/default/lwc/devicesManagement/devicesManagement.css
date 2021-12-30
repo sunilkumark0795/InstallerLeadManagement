@@ -1,0 +1,67 @@
+h1 {
+    padding-bottom: 16px;
+    color:cornflowerblue;
+    font-size: 2em;
+    font-weight: bolder;
+}
+.sectionHeader {
+    font-weight:bolder;
+    font-family:'Open Sans Semibold';
+    font-size: 2.2em;
+    color: #282828;
+    padding-bottom: 16px;
+}
+.deviceEnvironment {
+    font-family:'Open Sans Regular';
+    font-size: 1.6667em;
+    color: #585858;
+    padding-bottom: 24px;
+}
+.mainBox {
+    border-radius: .5em;
+    border: 1px solid #CAD1D5;
+    width: 160px;
+    height: 48px;
+    padding: 8px 8px 8px 8px;
+}
+.valueNonZero {
+    border-radius: .5em;
+    border: 1px solid #CAD1D5;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    vertical-align: middle;
+}
+.vpnDeviceEnvironment {
+    font-family:'Open Sans Regular';
+    font-size: 1.6667em;
+    color: #585858;
+}
+.minusButton {
+    border: 1px solid #3451a3;
+    width: 32px;
+    height: 32px;
+    border-radius: .5em;
+}
+.minusButton:active {
+    border: 1px solid #3451a3;
+    width: 32px;
+    height: 32px;
+    border-radius: .5em;
+}
+  
+.minusButton:hover {
+    border: 2px solid #3451a3;
+    filter: drop-shadow(opacity(25%) 3px 6px #3451a3);
+    border-radius: .5em;
+    width: 32px;
+    height: 32px;
+}
+  
+.minusButton:disabled,
+.minusButton[disabled] {
+    border: 1px solid #95a3ab;
+    width: 32px;
+    height: 32px;
+    border-radius: .5em;
+}

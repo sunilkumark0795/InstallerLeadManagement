@@ -1,0 +1,28 @@
+<apex:page standardController="Customer__c" >
+    <apex:form >
+        <apex:pageBlock title="View Customer Data" tabStyle="Customer__c">
+            <apex:pageBlockSection title="Customer Basic Deatails">
+                <apex:outputField value="{! Customer__c.Customer_Name__c}"/>
+                <Apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Email-Id : " />
+                    <apex:outputLabel value="{! Customer__c.Email__c }" />
+                </Apex:pageBlockSectionItem>
+                <apex:outputField value="{! Customer__c.Customer_Contact__c }" />
+                <apex:outputField value="{! Customer__c.Contact_Number__c }" />
+                <apex:outputField value="{! Customer__c.GST_Number__c }"/>
+               
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Customer Address">
+                <apex:outputField value="{! Customer__c.Address_Line_1__c }" />
+                <apex:outputField value="{! Customer__c.Address_Line_2__c }" />
+                <apex:outputField value="{! Customer__c.City__c }" />
+                <br/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton action="{!edit}" value="Click here to edit" title="Edit Customer Details" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

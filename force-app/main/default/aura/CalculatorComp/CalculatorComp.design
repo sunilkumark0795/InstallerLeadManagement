@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="number1" label="Number1"  description="Value for number1" />
+    <design:attribute name="number2" label="Number2"  description="Value for number2" />
+</design:component>

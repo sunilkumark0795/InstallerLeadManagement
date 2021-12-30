@@ -1,0 +1,26 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+ 
+    <aura:attribute name="number1" type="Integer" />
+    <aura:attribute name="number2" type="Integer" />
+    <aura:attribute name="opsName" type="String" default="+" />
+    <aura:attribute name="total" type="Integer" default="0" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.onAdd}" />
+ 
+    <lightning:card title="Calculator">
+        <lightning:input name="num1" type="number" label="Enter Number 1" value="{!v.number1}" />
+        <lightning:input name="num2" type="number" label="Enter Number 2" value="{!v.number2}" />
+       
+
+
+
+        {!v.number1} &nbsp; {!v.opsName} &nbsp; {!v.number2} = {!v.total}
+        <br/>
+        <br/>
+        <lightning:button label="Add" variant="brand" title="click here to Add" onclick="{!c.onAdd}" />
+        <lightning:button label="Subtract" variant="brand" title="click here to Subtract" onclick="{!c.onSubtract}" />
+        <lightning:button label="Multiply" variant="brand" title="click here to Multiply" onclick="{!c.onMultiply}" />
+        <lightning:button label="Divide" variant="brand" title="click here to Divide" onclick="{!c.onDivide}" />
+    </lightning:card>
+
+</aura:component>

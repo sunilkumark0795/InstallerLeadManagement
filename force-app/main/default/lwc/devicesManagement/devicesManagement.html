@@ -1,0 +1,189 @@
+<template>
+    <lightning-card>
+        <div style="padding-left: 10%;">
+        <table>
+            <tr>
+                <td style="width: 80%;"></td>
+                <td style="text-align: right; padding-right: 20px;">
+                    <lightning-button label="Help" title="Help" icon-name="utility:help" class="slds-m-left_x-small"></lightning-button>
+                </td>
+            </tr>
+            <tr style="padding-top: 10px;">
+                <td style="width: 80%;">
+                    <h1>What devices will you need?</h1>
+
+                    <div style="padding-bottom: 48px;">
+                        <h6>You must select at least one device</h6>
+                    </div>
+            
+                    <div class="sectionHeader">
+                        WAN
+                    </div>
+            
+                    <div class="slds-grid slds-wrap" style="padding-bottom: 48px;">
+                        <div class="slds-col slds-size_1-of-4 deviceEnvironment">
+                            Production
+                        </div>
+                        <div class="slds-col slds-size_1-of-4">
+                            <div class="mainBox">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <!--<lightning-button icon-name="utility:dash" title="Remove Product Quantity" aria-label="remove" onclick={removeProd}
+                                        class="minusButton">
+                                        </lightning-button>-->
+                                        <lightning-button-icon icon-name="utility:dash" title="Remove Product Quantity"
+                                            onclick={prodDecrementByOne} disabled>
+                                        </lightning-button-icon>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3" style="padding-right:24px;">
+                                        <div class="valueNonZero">1</div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-button-icon icon-name="utility:add" title="Add Product Quantity"
+                                            onclick={prodIncrementByOne}></lightning-button-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-4"></div>
+            
+                        <div class="slds-col slds-size_1-of-4 deviceEnvironment">
+                            Contingency
+                        </div>
+                        <div class="slds-col slds-size_1-of-4">
+                            <div class="mainBox">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-button-icon icon-name="utility:dash" title="Remove Product Quantity"
+                                            style="padding-right:24px;" onclick={prodDecrementByOne} disabled>
+                                        </lightning-button-icon>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3" style="padding-right:24px;">
+                                        <div class="valueNonZero">1</div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-button-icon icon-name="utility:add" title="Add Product Quantity"
+                                            onclick={prodIncrementByOne}></lightning-button-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-4"></div>
+            
+                        <div class="slds-col slds-size_1-of-4 deviceEnvironment">
+                            Test Only
+                        </div>
+                        <div class="slds-col slds-size_1-of-4">
+                            <div class="mainBox">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-button-icon icon-name="utility:dash" title="Remove Product Quantity"
+                                            style="padding-right:24px;" onclick={prodDecrementByOne} disabled>
+                                        </lightning-button-icon>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3" style="padding-right:24px;">
+                                        <div class="valueNonZero">1</div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-button-icon icon-name="utility:add" title="Add Product Quantity"
+                                            onclick={prodIncrementByOne}></lightning-button-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-4"></div>
+            
+                        <div class="slds-col slds-size_1-of-4 deviceEnvironment">
+                            Vendor Test Only
+                        </div>
+                        <div class="slds-col slds-size_1-of-4">
+                            <div class="mainBox">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-button-icon icon-name="utility:dash" title="Remove Product Quantity"
+                                            style="padding-right:24px;" onclick={prodDecrementByOne} disabled>
+                                        </lightning-button-icon>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3" style="padding-right:24px;">
+                                        <div class="valueNonZero">1</div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-button-icon icon-name="utility:add" title="Add Product Quantity"
+                                            onclick={prodIncrementByOne}></lightning-button-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-4"></div>
+                    </div>
+                    <div style="border: 1px solid #CAD1D5;border-style: none none solid none; "></div>
+            
+                    <div class="sectionHeader" style="padding-top: 48px;">
+                        VPN
+                    </div>
+            
+                    <div class="slds-grid slds-wrap" style="padding-bottom: 56px;">
+                        <div class="slds-col slds-size_1-of-4 vpnDeviceEnvironment">
+                            Connections
+                        </div>
+                        <div class="slds-col slds-size_1-of-4">
+                            <div class="mainBox">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-button-icon icon-name="utility:dash" title="Remove Product Quantity"
+                                            style="padding-right:24px;" onclick={prodDecrementByOne} disabled>
+                                        </lightning-button-icon>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3" style="padding-right:24px;">
+                                        <div class="valueNonZero">1</div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-button-icon icon-name="utility:add" title="Add Product Quantity"
+                                            onclick={prodIncrementByOne}></lightning-button-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-4"></div>
+                    </div>
+            
+                    <div class="slds-grid slds-wrap" style="padding-bottom: 56px;">
+                        <div class="slds-col slds-size_1-of-2 ">
+                            <lightning-button-icon icon-name="utility:chevronleft" title="Click here to go to Previous page"
+                                onclick={onPreviousClick} disabled></lightning-button-icon>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-button icon-name="utility:chevronright" label="Save and Next" title="Save and Next" onclick={SaveandNext}
+                                icon-position="right">
+                            </lightning-button>           
+                        </div>
+                    </div>
+                </td>
+                <td style="vertical-align: top;">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 ">
+                            <div style="color: crimson;">Potential FAQ</div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 ">1. <a href="#">What is WAN?</a></div>
+                        <div class="slds-col slds-size_1-of-1 ">2. <a href="#">What is VPN?</a></div>
+                        <div class="slds-col slds-size_1-of-1 ">3. <a href="#">What's the different between WAN and VPN?</a></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <!-- FOOTER -->
+        <footer role="contentinfo" class="slds-p-around_large">
+            <div style="border: 1px solid #CAD1D5;border-style: none none solid none; "></div>
+            <!-- LAYOUT GRID -->
+            <div class="slds-grid slds-grid_align-spread" style="padding-left: 10px; padding-right: 10px;">
+                <p class="slds-col">This site is a product of Federal Reserve Banks.</p>
+                <p class="slds-col">&copy; 2021 Federal Reserve Banks.</p>
+            </div>
+            <!-- / LAYOUT GRID -->
+        </footer>
+        <!-- / FOOTER -->
+
+        
+    </lightning-card>
+</template>
